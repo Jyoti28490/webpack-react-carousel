@@ -26,7 +26,100 @@ npm i webpack webpack-manifest-plugin webpack-cli webpack-dev-server babel-loade
 
 What we just installed:
 
-**Webpack**: bundles all our files into one file.
+### Webpack
+
+Webpack also needs a lot of stuff to work. Essentially, for every type of file we want to bundle, we'll need a specific loader.
+
+Hence, here's what we need:
+
+```shell
+npm i --D \
+    webpack \
+    webpack-cli \
+    webpack-dev-server \
+    style-loader \
+    css-loader \
+    babel-loader
+    html-webpack-plugin\
+    css-loader\
+    style-loader\
+    clean-webpack-plugin\
+    core-js\
+    file-loader\
+    mini-css-extract-plugin\
+    regenerator-runtime\
+    url-loader\
+```
+
+`webpack` and `webpack-cli` follow the same principle as Babel - one is the core package and the other let's us access those tools from the CLI.
+
+`webpack-dev-server` is what we need for local development. You'll notice that `package.json` never actually references it from a script, but it is required to run `webpack serve`:
+
+```
+[webpack-cli] For using 'serve' command you need to install: 'webpack-dev-server' package
+```
+
+Finally, the loaders are what we need for the different files we want to process. A `ts-loader` also exists, but, since we're using Babel to compile our JS files, we don't actually need it.
+
+And, like with Babel, we need a `webpack.config.js` file:
+
+```js
+// webpack.config.js
+const path = require('path')
+const webpack = require('webpack')
+
+module.exports = {
+    mode: "development",
+    entry: './app/app.js', // our entry point, as mentioned earlier
+    mode: 'development',
+    module: {
+        rules: [
+     {
+        test: /\.js$/, // matches .js files
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: "babel-loader", // uses babel-loader for the specified file types 
+          options: {
+            presets: [["@babel/preset-env", { "useBuiltIns": "usage", "corejs": 3, "targets": "defaults" }], "@babel/preset-react"]
+          }
+        }
+      }
+      {
+             test: /\.css$/, // matches .css files only (i.e. not .scss, etc)
+             use: ['style-loader', 'css-loader'], 
+      },
+      {
+        test: /\.(png|jpg|svg)$/,
+        loader: 'url-loader?limit=200000&name=Assets/[name].[ext]'
+      },
+        ],
+    },
+    output: {
+    filename: "myBundle.[hash].js", // our output bundle
+    path: path.resolve(__dirname, "dist") 
+    },
+    
+    devServer: {
+        port: 8080,
+        contentBase: path.resolve(__dirname, "dist"),
+        hot: true
+    },
+   plugins: [new HtmlWebpackPlugin({ template: "./app/index.html" })],
+   devtool: 'eval-source-map', // builds high quality source maps
+}
+
+if (currentTask == "build") {
+  config.mode = "production"
+  config.module.rules[0].use[0] = MiniCssExtractPlugin.loader
+  config.plugins.push(new MiniCssExtractPlugin({ filename: "main.[hash].css" }), new CleanWebpackPlugin(), new WebpackManifestPlugin())
+
+}
+
+module.exports = config
+
+
+```
+
 
 ### Babel 
 
