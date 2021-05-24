@@ -1,0 +1,45 @@
+.dots {
+  position: absolute;
+  bottom: 9.5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  /* margin-top: 20rem; */
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.slideshowDot {
+  padding: 8px;
+  margin-right: 5px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.slideshowDot.active {
+  background-color: green;
+}
+
+@media screen and (max-width: 768px) {
+  .dots {
+    bottom: 11.5rem;
+  }
+}
+
+@media screen and(max-width: 1200px) {
+  .dots {
+    bottom: 7.5rem;
+    margin-top: 25rem;
+  }
+}
+
+@media screen and(max-width: 1400px) {
+  .dots {
+    bottom: 7rem;
+  }
+}
