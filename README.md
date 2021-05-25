@@ -25,14 +25,14 @@ Here we have created a carousel which slides every 5 second on its own if no man
 
 <hr />
 
-## Create project directory
+## ⏭️ Create project directory
 
 First, create a new directory and cd into it:
 
 ```console
 mkdir webpack-react-carousel && cd webpack-react-carousel
 ```
-## Create a package.json file
+## 💻 Create a package.json file
 
 Next, let’s initialize the app with npm to manage all our dependencies.
 
@@ -41,7 +41,7 @@ npm init -y
 ```
 Great! Now you have your package.json file set up.
 
-## Install Dependencies
+## ⚙️ Install Dependencies
 
 Next up, the dev dependencies need to be installed for this application. Run this command and continue below for a breakdown of everything we just installed.
 
@@ -49,7 +49,7 @@ Next up, the dev dependencies need to be installed for this application. Run thi
 npm i webpack webpack-manifest-plugin webpack-cli webpack-dev-server babel-loader @babel/preset-react @babel/preset-env @babel/core html-webpack-plugin css-loader style-loader clean-webpack-plugin core-js file-loader mini-css-extract-plugin regenerator-runtime url-loader -D && npm i react react-dom react-icons -S
 ```
 
-**Here's what we installed:**
+** 🎯 Here's what we installed:**
 
 ```shell
 npm i --D \
@@ -71,7 +71,7 @@ npm i --D \
 ```
 Let's see in detail what each module does:
 
-### Webpack Module
+### ☑️ Webpack Module
 
 `webpack` : Installs the webpack module bundler.
 
@@ -82,7 +82,7 @@ Let's see in detail what each module does:
 ```
 [webpack-cli] For using 'serve' command you need to install: 'webpack-dev-server' package
 ```
-### Babel Module
+### ☑️ Babel Module
 
 Getting Babel to work requires quite a few packages, you can install them like this:
 
@@ -110,7 +110,7 @@ module.exports = {
 }
 ```
 
-### React Module
+### ☑️ React Module
 
 These 3 packages are the dependencies we need for our simple app.
 
@@ -120,7 +120,7 @@ These 3 packages are the dependencies we need for our simple app.
 
 `react-icons` For getting the arrow symbol in our Carousel App.
 
-### Loaders Module
+### ☑️ Loaders Module
 
 Webpack enables use of loaders to preprocess files. This allows you to bundle any static resource way beyond JavaScript.
 
@@ -132,7 +132,7 @@ Webpack enables use of loaders to preprocess files. This allows you to bundle an
 
 `file-loader` The file-loader resolves import/require() on a file into a url and emits the file into the output directory.
 
-## Plugins Module
+## ☑️ Plugins Module
 
 Plugins serve the purpose of doing anything else that a loader cannot do.
 
@@ -143,7 +143,7 @@ Plugins serve the purpose of doing anything else that a loader cannot do.
 `clean-webpack-plugin` A webpack plugin to remove/clean the dist folder.
 
 
-### Create a webpack.config.js
+### ☑️ Create a webpack.config.js
 
 After installation of all the above dependencies now it's time to create the webpack.config.js and below is the code to be placed inside the file:
 
@@ -204,7 +204,7 @@ module.exports = config
 
 ```
 
-## Scripts in package.json
+## 🎯 Scripts in package.json
 
 Add the following lines of code under the scripts section in **package.json**  file
 
