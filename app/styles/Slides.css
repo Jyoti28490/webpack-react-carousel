@@ -1,0 +1,77 @@
+.slides-box {
+  position: relative;
+  max-width: 30rem;
+  margin: 0 auto;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  border-radius: 1.5rem;
+  box-shadow: 0 1rem 4rem rgba(63, 46, 46, 0.45);
+  /* overflow: hidden; */
+  /* transition: ease 2000ms; */
+  overflow-x: auto;
+}
+
+.slide::-webkit-scrollbar {
+  width: 0;
+}
+
+.utility {
+  position: absolute;
+  max-width: 30rem;
+  z-index: 3;
+  height: 4rem;
+  padding: 0.5rem;
+  bottom: 0;
+  background-color: white;
+  padding: 0.5rem;
+}
+
+.card {
+  max-width: 30rem;
+  height: 20rem;
+  padding: 0 14rem;
+  background-color: pink;
+  margin: 0 2px 0 0;
+  display: flex;
+  transition: ease 2000ms;
+}
+
+.card:first-child {
+  margin-left: -16rem;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: 20rem;
+  }
+
+  .slides-box {
+    width: 20rem;
+  }
+}
+
+@media screen and(max-width: 1200px) {
+  .card {
+    width: 40rem;
+  }
+
+  .slides-box {
+    width: 40rem;
+  }
+}
+
+@media screen and(max-width: 1400px) {
+  .card {
+    width: 50rem;
+  }
+
+  .slides-box {
+    width: 50rem;
+  }
+}

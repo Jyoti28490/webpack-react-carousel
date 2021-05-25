@@ -1,0 +1,82 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: rgb(31, 30, 30);
+}
+
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin-top: 2.5rem;
+}
+
+.buttons {
+  display: flex;
+  max-width: 30rem;
+  position: absolute;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+  height: 4rem;
+  background-color: teal;
+  /* border: 1px solid black; */
+  box-shadow: 0 1.5rem 1rem rgba(white, 0.45);
+}
+
+.buttons > * {
+  background-color: teal;
+}
+
+.button__middle {
+  margin: auto;
+  /* display: flex; */
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 500;
+  justify-content: center;
+}
+
+.button {
+  border-style: none;
+  /* background-color: teal; */
+  cursor: pointer;
+}
+
+.button--left > *,
+.button--right > * {
+  background-color: teal;
+}
+
+@media screen and (max-width: 768px) {
+  .buttons {
+    width: 20rem;
+  }
+
+  /* .container > * {
+    max-width: 25 rem;
+  } */
+
+  /* .container .container__dots {
+    top: 20rem;
+    /* bottom: 50%; */
+}
+
+@media screen and(max-width: 1200px) {
+  .buttons {
+    width: 40rem;
+  }
+}
+
+@media screen and(max-width: 1400px) {
+  .buttons {
+    width: 50rem;
+  }
+}
