@@ -25,7 +25,7 @@ Here we have created a carousel which slides every 5 second on its own if no man
 
 <hr />
 
-## Create project directory
+## ⏭️ Create project directory
 
 First, create a new directory and cd into it:
 
