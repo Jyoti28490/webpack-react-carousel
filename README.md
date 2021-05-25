@@ -1,5 +1,6 @@
-# webpack-react-carousel
-React Carousel built with Webpack
+ # webpack-react-carousel
+
+Here we have created a carousel which slides every 5 second on its own if no manual intervention is made else it is an infinite slider with mouse and swipe features and can be used on mobile and desktop
 
 ## Create project directory
 
@@ -201,4 +202,4 @@ The App structure looks like below:
 
 ![image](https://user-images.githubusercontent.com/71496725/119441791-58318c00-bd44-11eb-9aaa-3b8e3f90e5c8.png)
 
-
+**And our Carousel App is Ready** :collision: 🔥 :boom:
