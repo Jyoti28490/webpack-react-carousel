@@ -1,5 +1,5 @@
 <h1 align='center' style='margin: auto; text-align: center'>
-    <img src='readme-assets/react.svg' width=25 style='display: inline-block' /> # webpack-react-carousel
+    <img src='readme-assets/react.svg' width=25 style='display: inline-block' /> React carousel Built with Webpack
     <img src='readme-assets/react.svg' width=25 style='display: inline-block' />
 </h1>
 
@@ -9,24 +9,19 @@ Here we have created a carousel which slides every 5 second on its own if no man
 
 ## 📋 Table of Contents
 
-1. [Create Project Directory](#%EF%B8%8F-running-as-a-boilerplate)
-1. [Motivation](#-motivation)
-1. [Objective](#-objective)
-1. [Tooling](#%EF%B8%8F-tooling)
-1. [Getting Started](#%EF%B8%8F-getting-started)
-1. [Setup](#%EF%B8%8F-setup)
-    - [Babel](#babel)
-    - [TypeScript](#typescript)
-    - [Webpack](#webpack)
-    - [React](#react)
-    - [Kea](#kea)
-    - [package.json](#packagejson)
-1. [Finally, some React code](#-finally-some-react-code)
-    - [But first, some vanilla HTML](#but-first-some-vanilla-html)
-    - [The entry point](#the-entry-point)
-    - [Our App!](#our-app)
-    - [Writing JS and TS side-by-side](#writing-js-and-ts-side-by-side)
-    - [Counter](#counter)
+1. [Create Project Directory](#%EF%B8%8F-create-project-directory)
+1. [Create a package.json file](#-motivation)
+1. [Install Dependencies](#-objective)
+    - [Webpack Module](#babel)
+    - [Babel Module](#typescript)
+    - [React Module](#webpack)
+    - [Loader Module](#react)
+    - [Plugin Module](#kea)
+1. [Create a webpack.config.js](#-finally-some-react-code)
+1. [Include scripts in package.json](#but-first-some-vanilla-html)
+1. [Complete Project structure](#the-entry-point)
+1. [The App module structure](#our-app)
+ 
 
 <hr />
 
