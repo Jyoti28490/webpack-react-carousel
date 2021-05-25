@@ -1,6 +1,34 @@
- # webpack-react-carousel
+<h1 align='center' style='margin: auto; text-align: center'>
+    <img src='readme-assets/react.svg' width=25 style='display: inline-block' /> # webpack-react-carousel
+    <img src='readme-assets/react.svg' width=25 style='display: inline-block' />
+</h1>
 
 Here we have created a carousel which slides every 5 second on its own if no manual intervention is made else it is an infinite slider with mouse and swipe features and can be used on mobile and desktop
+
+<hr />
+
+## 📋 Table of Contents
+
+1. [Create Project Directory](#%EF%B8%8F-running-as-a-boilerplate)
+1. [Motivation](#-motivation)
+1. [Objective](#-objective)
+1. [Tooling](#%EF%B8%8F-tooling)
+1. [Getting Started](#%EF%B8%8F-getting-started)
+1. [Setup](#%EF%B8%8F-setup)
+    - [Babel](#babel)
+    - [TypeScript](#typescript)
+    - [Webpack](#webpack)
+    - [React](#react)
+    - [Kea](#kea)
+    - [package.json](#packagejson)
+1. [Finally, some React code](#-finally-some-react-code)
+    - [But first, some vanilla HTML](#but-first-some-vanilla-html)
+    - [The entry point](#the-entry-point)
+    - [Our App!](#our-app)
+    - [Writing JS and TS side-by-side](#writing-js-and-ts-side-by-side)
+    - [Counter](#counter)
+
+<hr />
 
 ## Create project directory
 
@@ -99,6 +127,8 @@ These 3 packages are the dependencies we need for our simple app.
 
 ### Loaders Module
 
+Webpack enables use of loaders to preprocess files. This allows you to bundle any static resource way beyond JavaScript.
+
 `style-loader` Inject CSS into the DOM.
 
 `css-loader`  The css-loader interprets @import and url() like import/require() and will resolve them.
@@ -108,6 +138,8 @@ These 3 packages are the dependencies we need for our simple app.
 `file-loader` The file-loader resolves import/require() on a file into a url and emits the file into the output directory.
 
 ## Plugins Module
+
+Plugins serve the purpose of doing anything else that a loader cannot do.
 
 `html-webpack-plugin`The HtmlWebpackPlugin simplifies creation of HTML files to serve your webpack bundles. This is especially useful for webpack bundles that include a hash in the filename which changes every compilation. 
 
@@ -202,4 +234,4 @@ The App structure looks like below:
 
 ![image](https://user-images.githubusercontent.com/71496725/119441791-58318c00-bd44-11eb-9aaa-3b8e3f90e5c8.png)
 
-**And our Carousel App is Ready** :collision: 🔥 :boom:
+**And our Carousel App is Ready** :collision: 🔥 :boom: on ```http://localhost:8080/``` in Dev environment
