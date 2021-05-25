@@ -10,7 +10,7 @@ Here we have created a carousel which slides every 5 second on its own if no man
 ## 📋 Table of Contents
 
 1. [Create Project Directory](#create-project-directory)
-1. [Create a package.json file](#create-a-package-.-json-file)
+1. [Create a package.json file](#create-a-packagejson-file)
 1. [Install Dependencies](#-objective)
     - [Webpack Module](#babel)
     - [Babel Module](#typescript)
