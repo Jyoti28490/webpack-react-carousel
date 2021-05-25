@@ -24,13 +24,7 @@ Next up, the dev dependencies need to be installed for this application. Run thi
 npm i webpack webpack-manifest-plugin webpack-cli webpack-dev-server babel-loader @babel/preset-react @babel/preset-env @babel/core html-webpack-plugin css-loader style-loader clean-webpack-plugin core-js file-loader mini-css-extract-plugin regenerator-runtime url-loader -D && npm i react react-dom react-icons -S
 ```
 
-What we just installed:
-
-### Webpack
-
-Webpack also needs a lot of stuff to work. Essentially, for every type of file we want to bundle, we'll need a specific loader.
-
-Hence, here's what we need:
+**Here's what we installed:**
 
 ```shell
 npm i --D \
@@ -50,16 +44,62 @@ npm i --D \
     regenerator-runtime\
     url-loader\
 ```
+Let's see in detail what each module does:
 
-`webpack` and `webpack-cli` follow the same principle as Babel - one is the core package and the other let's us access those tools from the CLI.
+### Webpack Module
 
-`webpack-dev-server` is what we need for local development. You'll notice that `package.json` never actually references it from a script, but it is required to run `webpack serve`:
+`webpack` : Installs the webpack module bundler.
+
+`webpack-cli` Offers a variety of commands that make it easier to work with webpack from the CLI.
+
+`webpack-dev-server` is what we need for local development.Allows us to use a simple web server with hot reload. You'll notice that `package.json` never actually references it from a script, but it is required to run `webpack serve`:
 
 ```
 [webpack-cli] For using 'serve' command you need to install: 'webpack-dev-server' package
 ```
+### Babel Module
 
-Finally, the loaders are what we need for the different files we want to process. A `ts-loader` also exists, but, since we're using Babel to compile our JS files, we don't actually need it.
+Getting Babel to work requires quite a few packages, you can install them like this:
+
+```shell
+npm i --D \
+  @babel/core \
+  @babel/preset-env \
+  @babel/preset-react\
+  babel-loader
+```
+`babel-core` is the compiler, the main thing we need.Transforms your ES6 code into ES5.
+
+`preset-env` Determines which transformations/plugins to use and polyfills (provide modern functionality on older browsers that do not natively support it) based on the browser matrix you want to support. 
+
+`preset-react` Babel preset for all React plugins, for example turning JSX into functions
+
+`babel-loader` Webpack helper to transform your JavaScript dependencies (for example, when you import your components into other components) with Babel
+
+Finally, we need to set up a `.babelrc` file, specifying to the compiler the presets we're using:
+
+```js
+// .babelrc
+module.exports = {
+    presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript'],
+}
+```
+
+### React Module
+
+
+
+### Loaders Module
+
+`style-loader` Inject CSS into the DOM.
+
+`css-loader`  The css-loader interprets @import and url() like import/require() and will resolve them.
+
+`url-loader`  A loader for webpack which transforms files into base64 URIs.
+
+`file-loader` The file-loader resolves import/require() on a file into a url and emits the file into the output directory.
+
+### Create a webpack.config.js
 
 And, like with Babel, we need a `webpack.config.js` file:
 
@@ -121,31 +161,7 @@ module.exports = config
 ```
 
 
-### Babel 
 
-Getting Babel to work requires quite a few packages, you can install them like this:
-
-```shell
-npm i --D \
-  @babel/core \
-  @babel/cli \
-  @babel/preset-env \
-  @babel/preset-react
-```
-`babel-core` is the compiler, the main thing we need.
-
-`babel-cli` will let us use the compiler via the CLI.
-
-The last two packages are Babel "templates" (presets), for dealing with various use cases. `preset-env` is used to prevent us from having headaches, allowing us to write modern JS while ensuring the output will work across clients. `preset-react` are quite self-explanatory we are using React, so we'll be needing them.
-
-Finally, we need to set up a `.babelrc` file, specifying to the compiler the presets we're using:
-
-```js
-// .babelrc
-module.exports = {
-    presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript'],
-}
-```
 **babel-loader**: works with Webpack to transpile ES6+ into ES5 which is supported by older browsers
 @babel/preset-react: extends Babel support to JSX
 html-webpack-plugin: “simplifies the creation of HTML files to serve your Webpack bundles” -https://webpack.js.org/plugins/html-webpack-plugin/
