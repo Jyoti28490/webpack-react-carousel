@@ -49,7 +49,7 @@ Next up, the dev dependencies need to be installed for this application. Run thi
 npm i webpack webpack-manifest-plugin webpack-cli webpack-dev-server babel-loader @babel/preset-react @babel/preset-env @babel/core html-webpack-plugin css-loader style-loader clean-webpack-plugin core-js file-loader mini-css-extract-plugin regenerator-runtime url-loader -D && npm i react react-dom react-icons -S
 ```
 
-** 🎯 Here's what we installed:**
+## 🎯 Here's what we installed:**
 
 ```shell
 npm i --D \
