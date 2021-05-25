@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: rgb(31, 30, 30);
+}
+
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin-top: 2.5rem;
+}
+
+.buttons {
+  display: flex;
+  max-width: 30rem;
+  position: absolute;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+  height: 4rem;
+  background-color: teal;
+  /* border: 1px solid black; */
+  box-shadow: 0 1.5rem 1rem rgba(white, 0.45);
+}
+
+.buttons > * {
+  background-color: teal;
+}
+
+.button__middle {
+  margin: auto;
+  /* display: flex; */
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 500;
+  justify-content: center;
+}
+
+.button {
+  border-style: none;
+  /* background-color: teal; */
+  cursor: pointer;
+}
+
+.button--left > *,
+.button--right > * {
+  background-color: teal;
+}
+
+@media screen and (max-width: 768px) {
+  .buttons {
+    width: 20rem;
+  }
+
+  /* .container > * {
+    max-width: 25 rem;
+  } */
+
+  /* .container .container__dots {
+    top: 20rem;
+    /* bottom: 50%; */
+}
+
+@media screen and(max-width: 1200px) {
+  .buttons {
+    width: 40rem;
+  }
+}
+
+@media screen and(max-width: 1400px) {
+  .buttons {
+    width: 50rem;
+  }
+}
+
+.dots {
+  position: absolute;
+  bottom: 9.5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  /* margin-top: 20rem; */
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.slideshowDot {
+  padding: 8px;
+  margin-right: 5px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.slideshowDot.active {
+  background-color: green;
+}
+
+@media screen and (max-width: 768px) {
+  .dots {
+    bottom: 11.5rem;
+  }
+}
+
+@media screen and(max-width: 1200px) {
+  .dots {
+    bottom: 7.5rem;
+    margin-top: 25rem;
+  }
+}
+
+@media screen and(max-width: 1400px) {
+  .dots {
+    bottom: 7rem;
+  }
+}
+
+.slides-box {
+  position: relative;
+  max-width: 30rem;
+  margin: 0 auto;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  border-radius: 1.5rem;
+  box-shadow: 0 1rem 4rem rgba(63, 46, 46, 0.45);
+  /* overflow: hidden; */
+  /* transition: ease 2000ms; */
+  overflow-x: auto;
+}
+
+.slide::-webkit-scrollbar {
+  width: 0;
+}
+
+.utility {
+  position: absolute;
+  max-width: 30rem;
+  z-index: 3;
+  height: 4rem;
+  padding: 0.5rem;
+  bottom: 0;
+  background-color: white;
+  padding: 0.5rem;
+}
+
+.card {
+  max-width: 30rem;
+  height: 20rem;
+  padding: 0 14rem;
+  background-color: pink;
+  margin: 0 2px 0 0;
+  display: flex;
+  transition: ease 2000ms;
+}
+
+.card:first-child {
+  margin-left: -16rem;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: 20rem;
+  }
+
+  .slides-box {
+    width: 20rem;
+  }
+}
+
+@media screen and(max-width: 1200px) {
+  .card {
+    width: 40rem;
+  }
+
+  .slides-box {
+    width: 40rem;
+  }
+}
+
+@media screen and(max-width: 1400px) {
+  .card {
+    width: 50rem;
+  }
+
+  .slides-box {
+    width: 50rem;
+  }
+}
+
