@@ -204,7 +204,7 @@ module.exports = config
 
 ```
 
-## 🎯 Scripts in package.json
+## 🎯 Include Scripts in package.json
 
 Add the following lines of code under the scripts section in **package.json**  file
 
