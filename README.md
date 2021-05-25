@@ -8,14 +8,15 @@ First, create a new directory and cd into it:
 ```console
 mkdir webpack-react-carousel && cd webpack-react-carousel
 ```
+## Create a package.json file
 
 Next, let’s initialize the app with npm to manage all our dependencies.
 
 ```console
 npm init -y
 ```
-
 Great! Now you have your package.json file set up.
+
 ## Install Dependencies
 
 Next up, the dev dependencies need to be installed for this application. Run this command and continue below for a breakdown of everything we just installed.
@@ -72,11 +73,11 @@ npm i --D \
 
 `preset-env` Determines which transformations/plugins to use and polyfills (provide modern functionality on older browsers that do not natively support it) based on the browser matrix you want to support. 
 
-`preset-react` Babel preset for all React plugins, for example turning JSX into functions
+`@babel/preset-react` Extends Babel support to JSX, for example turning JSX into functions 
 
 `babel-loader` Webpack helper to transform your JavaScript dependencies (for example, when you import your components into other components) with Babel
 
-Finally, we need to set up a `.babelrc` file, specifying to the compiler the presets we're using:
+We can to set up a `.babelrc` file in a separate folder on root and it has to set as below, however we are including it as part of our webpack.config.js file :
 
 ```js
 // .babelrc
@@ -87,7 +88,13 @@ module.exports = {
 
 ### React Module
 
+These 3 packages are the dependencies we need for our simple app.
 
+`react` The react package contains only the functionality necessary to define React components.
+
+`react-dom` The react-dom package provides DOM-specific methods that can be used at the top level of the App and it serves as the entry point to the DOM and server renders for React
+
+`react-icons` For getting the arrow symbol in our Carousel App.
 
 ### Loaders Module
 
@@ -99,9 +106,18 @@ module.exports = {
 
 `file-loader` The file-loader resolves import/require() on a file into a url and emits the file into the output directory.
 
+## Plugins Module
+
+`html-webpack-plugin`The HtmlWebpackPlugin simplifies creation of HTML files to serve your webpack bundles. This is especially useful for webpack bundles that include a hash in the filename which changes every compilation. 
+
+`mini-css-extract-plugin` This plugin extracts CSS into separate files. It creates a CSS file per JS file which contains CSS.
+
+`clean-webpack-plugin` A webpack plugin to remove/clean the dist folder.
+
+
 ### Create a webpack.config.js
 
-And, like with Babel, we need a `webpack.config.js` file:
+After installation of all the above dependencies now it's time to create the webpack.config.js and below is the code to be placed inside the file:
 
 ```js
 // webpack.config.js
@@ -160,15 +176,29 @@ module.exports = config
 
 ```
 
+## Scripts in package.json
+
+Add the following lines of code under the scripts section in **package.json**  file
+
+```
+"dev": "webpack-dev-server --hot --open",
+"build": "webpack --mode production",
+"deploy": "gh-pages -d dist",
+"publish": "npm run build && npm run deploy"
+
+```
+![image](https://user-images.githubusercontent.com/71496725/119441538-e78a6f80-bd43-11eb-9d12-d2c2a909a7c2.png)
+
+## Complete Project Structure 
+
+The complete project structure is as follows:
+
+![image](https://user-images.githubusercontent.com/71496725/119441641-19033b00-bd44-11eb-9809-b260f46d6f61.png)
+
+## The App module structure
+
+The App structure looks like below:
+
+![image](https://user-images.githubusercontent.com/71496725/119441791-58318c00-bd44-11eb-9aaa-3b8e3f90e5c8.png)
 
 
-**babel-loader**: works with Webpack to transpile ES6+ into ES5 which is supported by older browsers
-@babel/preset-react: extends Babel support to JSX
-html-webpack-plugin: “simplifies the creation of HTML files to serve your Webpack bundles” -https://webpack.js.org/plugins/html-webpack-plugin/
-webpack-dev-server: allows you to use Webpack with a development server that provides live reloading.
-webpack-cli: “webpack CLI provides a flexible set of commands for developers to increase speed when setting up a custom Webpack project.” -https://www.npmjs.com/package/webpack-cli
-css-loader: allows Webpack to convert the CSS file into a JavaScript string.
-style-loader: inserts the JavaScript string into HTML dom.
-@babel/plugin-proposal-class-properties: “This plugin transforms static class properties as well as properties declared with the property initializer syntax” -https://www.npmjs.com/package/@babel/plugin-proposal-class-properties
-react: JavaScript library
-react-dom: “Serves as the entry point to the DOM and server renderers for React” -https://www.npmjs.com/package/react-dom
