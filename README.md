@@ -12,13 +12,13 @@ Here we have created a carousel which slides every 5 second on its own if no man
 1. [Create Project Directory](#%EF%B8%8F-create-project-directory)
 1. [Create a package.json file](#-create-a-packagejson-file)
 1. [Install Dependencies](#%EF%B8%8F-install-dependencies)
-    - [Webpack Module](#webpack-module)
-    - [Babel Module](#babel-module)
-    - [React Module](#react-module)
-    - [Loaders Module](#loaders-module)
-    - [Plugins Module](#plugins-module)
-1. [Create a webpack.config.js](#create-a-webpackconfigjs)
-1. [Include scripts in package.json](#include-scripts-in-packagejson)
+    - [Webpack Module](#-webpack-module)
+    - [Babel Module](#-babel-module)
+    - [React Module](#-react-module)
+    - [Loaders Module](#-loaders-module)
+    - [Plugins Module](#-plugins-module)
+1. [Create a webpack.config.js](#-create-a-webpackconfigjs)
+1. [Include scripts in package.json](#-include-scripts-in-packagejson)
 1. [Complete Project structure](#complete-project-structure)
 1. [The App module structure](#the-app-module-structure)
  
@@ -49,7 +49,7 @@ Next up, the dev dependencies need to be installed for this application. Run thi
 npm i webpack webpack-manifest-plugin webpack-cli webpack-dev-server babel-loader @babel/preset-react @babel/preset-env @babel/core html-webpack-plugin css-loader style-loader clean-webpack-plugin core-js file-loader mini-css-extract-plugin regenerator-runtime url-loader -D && npm i react react-dom react-icons -S
 ```
 
-## 🎯 Here's what we installed:**
+## 🎯 Here's what we installed:
 
 ```shell
 npm i --D \
