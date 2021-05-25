@@ -9,9 +9,9 @@ Here we have created a carousel which slides every 5 second on its own if no man
 
 ## 📋 Table of Contents
 
-1. [Create Project Directory](#create-project-directory)
-1. [Create a package.json file](#create-a-packagejson-file)
-1. [Install Dependencies](#install-dependencies)
+1. [Create Project Directory](#%EF%B8%8F-create-project-directory)
+1. [Create a package.json file](#-create-a-packagejson-file)
+1. [Install Dependencies](#%EF%B8%8F-install-dependencies)
     - [Webpack Module](#webpack-module)
     - [Babel Module](#babel-module)
     - [React Module](#react-module)
@@ -25,7 +25,7 @@ Here we have created a carousel which slides every 5 second on its own if no man
 
 <hr />
 
-## ⏭️ Create project directory
+## Create project directory
 
 First, create a new directory and cd into it:
 
